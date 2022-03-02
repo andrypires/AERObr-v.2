@@ -9,11 +9,11 @@ class ListaCadastroComponente extends Component {
         }
     }
 
-    componentDidMount(){
+    /*componentDidMount(){
         CadastroService.getCadastros().then((res) => {
             this.setState({cadastros: res.data});
         });
-    }
+    } */
 
     render() {
         return (
@@ -36,16 +36,15 @@ class ListaCadastroComponente extends Component {
                                 this.state.cadastros.map(
                                     cadastro =>
                                     <tr key = {cadastro.id}>
-                                        <td> {cadastro.id} </td>
                                         <td> {cadastro.pNome} </td>
                                         <td> {cadastro.sNome} </td>
                                         <td> {cadastro.email} </td>
                                         <td> {cadastro.idade} </td>
-
                                     </tr>
                                 )
                             }
                         </tbody>
+                        
                     </table>
                 </div>
             </div>
